@@ -1,23 +1,34 @@
-<
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
 
-<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+  <!-- Wrapper for slides -->
+  
   <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="<?php echo base_url() ?>/assets/img/img1.jpg" class="d-block w-100" alt="...">
+    <div class="item active">
+      <img src="https://convention-meetings.com/images/blog/3-tipos-personas/3-tipos-de-personas-en-una-conferencia-convention-meetings-cover-y-mini.jpg" alt="img banner1"height="100px"width="500px">
     </div>
-    <div class="carousel-item">
-      <img src="..<?php echo base_url() ?>/assets/img/img2.jpg" class="d-block w-100" alt="...">
+
+    <div class="item">
+      <img src="https://anfitriones.mx/wp-content/uploads/2017/09/conference-2705706_1920.jpg" alt="img banner2"height="100px"width="500px">
     </div>
-    <div class="carousel-item">
-      <img src="..." class="d-block w-100" alt="...">
+
+    <div class="item">
+      <img src="https://www.florespedia.com/Imagenes/flores-bonitas.jpg" alt="img banner3"height="100px"width="500px">
     </div>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    <span class="sr-only">Next</span>
+  </a>
 </div>

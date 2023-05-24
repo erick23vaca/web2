@@ -26,7 +26,13 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
             <li class="active"><a href="">link <span class="sr-only">(current)</span></a></li>
-            <li><a href="">Link</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cursos <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="<?php echo site_url("cursos/nuevo"); ?>">Nuevo</a></li>
+                <li><a href="<?php echo site_url("cursos/index"); ?>">Listado</a></li>
+              </ul>
+            </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Instructores <span class="caret"></span></a>
               <ul class="dropdown-menu">
