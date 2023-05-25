@@ -9,9 +9,9 @@ class Instructores extends CI_Controller{
     }
     /* fincion que renderisa la vista index */
     public function index(){
-
+        $data['instructores']=$this->Instructor->obtenerTodos();
         $this->load->view('header');
-        $this->load->view('instructores/index');
+        $this->load->view('instructores/index',$data);
         $this->load->view('footer');
 
 
@@ -33,8 +33,13 @@ class Instructores extends CI_Controller{
         "telefono_ins"=>$this->input->post('telefono_ins'),
         "direccion_ins"=>$this->input->post('direccion_ins'),
       );
-      $this->Instructor->insertar($datosNuevoInstructor);
-    }
+      if ($this->Instructor->insertar($datosNuevoInstructor)){
+          redirect('instructores/index');
+      }else{
+          echo "<h1> ERROR AL INSERTAR </h1>";
+      }
+      }
+
 }//cierre de la clase
 
 

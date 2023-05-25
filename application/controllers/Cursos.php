@@ -9,9 +9,9 @@ class Cursos extends CI_Controller{
     }
     /* fincion que renderisa la vista index */
     public function index(){
-
+        $data['cursos']=$this->Curso->obtenerTodos();
         $this->load->view('header');
-        $this->load->view('cursos/index');
+        $this->load->view('cursos/index',$data);
         $this->load->view('footer');
 
 
@@ -31,7 +31,11 @@ class Cursos extends CI_Controller{
         "precio_cur"=>$this->input->post('precio_cur'),
         "aula_cur"=>$this->input->post('aula_cur'),
       );
-      $this->Curso->insertar($datosNuevoCurso);
+      if ($this->Curso->insertar($datosNuevoCurso)) {
+        redirect('cursos/index');
+      }else{
+        echo "<h1> ERROR AL INSERTAR </h1>";
+      }
     }
 }//cierre de la clase
 

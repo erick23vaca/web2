@@ -5,12 +5,19 @@ class Curso extends CI_Model
   {
     parent::__construct();
   }
-  // funcion para insertar un instructor
+
   function insertar($datos){
-    // active record -> codeigniter
-    //sql inyeccion
+
     return $this->db->insert("curso", $datos);
 
+  }
+  function obtenerTodos(){
+    $listadoCursos=$this->db->get("curso");
+    if ($listadoCursos->num_rows()>0) {
+      return $listadoCursos->result();
+    }else{
+      return false;
+    }
   }
 }//cierre de la clase
 

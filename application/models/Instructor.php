@@ -12,6 +12,15 @@ class Instructor extends CI_Model
     return $this->db->insert("instructor", $datos);
 
   }
+  function obtenerTodos(){
+    $listadoInstructores=$this->db->get("instructor");
+    if ($listadoInstructores->num_rows()>0) {
+      return $listadoInstructores->result();
+    }else{
+      return false;
+    }
+  }
+
 }//cierre de la clase
 
 
