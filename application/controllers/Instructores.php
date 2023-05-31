@@ -18,7 +18,6 @@ class Instructores extends CI_Controller{
     }
     /* funcion que renderisa la vista nuevo */
     public function nuevo(){
-
         $this->load->view('header');
         $this->load->view('instructores/nuevo');
         $this->load->view('footer');
@@ -39,7 +38,15 @@ class Instructores extends CI_Controller{
           echo "<h1> ERROR AL INSERTAR </h1>";
       }
       }
-
+      // funcion para eliminar INSTRUCTORES
+      public function eliminar($id_ins){
+        // echo $id_ins;
+        if ($this->Instructor->borrar($id_ins)) {
+          redirect('instructores/index');
+        }else{
+          echo "ERROR AL BORRAR :'(";
+        }
+      }
 }//cierre de la clase
 
 

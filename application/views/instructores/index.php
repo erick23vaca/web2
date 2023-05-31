@@ -3,7 +3,8 @@
 </div>
 <br>
 <?php if ($instructores): ?>
-<table class="table table-striped table-bordered">
+  <!-- table-hoverpara que el pulsor se marque -->
+<table class="table table-striped table-bordered table-hover">
   <thead>
     <tr>
       <th>ID</th>
@@ -44,7 +45,16 @@
         <td>
           <?php echo $filaTemporal->direccion_ins; ?>
         </td>
-
+        <td class="text-center">
+          <a href="#" title="Editar Instructores">
+            <i class="glyphicon glyphicon-pencil"></i>
+          </a>
+          &nbsp;&nbsp; &nbsp;
+          <a href="<?php echo site_url(); ?>/instructores/eliminar/<?php echo $filaTemporal->id_ins ?>"
+            title="Eliminar Instructores" style="color:red;">
+            <i class="glyphicon glyphicon-trash"></i>
+          </a>
+        </td>
 
       </tr>
     <?php endforeach; ?>

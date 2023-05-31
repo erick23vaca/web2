@@ -20,7 +20,11 @@ class Instructor extends CI_Model
       return false;
     }
   }
-
+  // borar instructores
+  function borrar($id_ins){
+    $this->db->where("id_ins",$id_ins);
+    return $this->db->delete("instructor"); 
+  }
 }//cierre de la clase
 
 
