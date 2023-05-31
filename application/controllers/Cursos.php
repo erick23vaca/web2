@@ -37,6 +37,14 @@ class Cursos extends CI_Controller{
         echo "<h1> ERROR AL INSERTAR </h1>";
       }
     }
+    public function eliminar($id_cur){
+      // echo $id_ins;
+      if ($this->Curso->borrar($id_cur)) {
+        redirect('cursos/index');
+      }else{
+        echo "ERROR AL BORRAR :'(";
+      }
+    }
 }//cierre de la clase
 
 

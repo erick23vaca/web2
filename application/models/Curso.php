@@ -19,6 +19,10 @@ class Curso extends CI_Model
       return false;
     }
   }
+  function borrar($id_cur){
+    $this->db->where("id_cur",$id_cur);
+    return $this->db->delete("curso"); 
+  }
 }//cierre de la clase
 
 

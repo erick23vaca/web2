@@ -42,7 +42,8 @@
             <i class="glyphicon glyphicon-pencil"></i>
           </a>
           &nbsp;&nbsp; &nbsp;
-          <a href="#" title="Eliminar Cursos" style="color:red;">
+          <a href="<?php echo site_url(); ?>/cursos/eliminar/<?php echo $filaTemporal->id_cur ?>"
+          title="Eliminar Cursos" style="color:red;">
             <i class="glyphicon glyphicon-trash"></i>
           </a>
         </td>
